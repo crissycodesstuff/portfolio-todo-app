@@ -1,3 +1,3 @@
 # The Typing Game
 
-Complete solution available here - https://github.com/snakemode/TypingGame
+Complete solution available here - https://github.com/snakemode/ToDoApp
