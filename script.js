@@ -5,21 +5,17 @@ const tasks = document.getElementById("tasks");
 console.log(taskInput, addButton, tasks);
 
 addButton.addEventListener("click", addNewItem);
+taskInput.addEventListener("keyup", processKeyPress)
 
-const items = [
-  { 
-    value: "study js for 1 hour", 
-    complete: false
-  },
-  { 
-    value: "practice yog for 30 minutes", 
-    complete: false
-  },
-];
+const items = [];
 
 for (let item of items) {
   const li = createElementForTask(item);
   tasks.appendChild(li);
+}
+
+function processKeyPress(event) {
+  
 }
 
 function createElementForTask(item) {
@@ -45,4 +41,7 @@ function addNewItem() {
   
   let newItem = createElementForTask(task);
   tasks.appendChild(newItem);
+  
+  taskInput.value = "";
+  taskInput.focus();
 }
