@@ -15,7 +15,12 @@ for (let item of items) {
 }
 
 function processKeyPress(event) {
+  console.log(event.target.value.trim);
+    addButton.disabled = event.target.value.trim() === "";
   
+  if (event.key === "Enter" && !addButton.disabled) {
+    addNewItem();
+  }
 }
 
 function createElementForTask(item) {
