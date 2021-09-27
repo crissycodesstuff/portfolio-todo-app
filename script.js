@@ -7,7 +7,12 @@ console.log(taskInput, addButton, tasks);
 addButton.addEventListener("click", addNewItem);
 
 const items = [
-  { value: "feed pickle", 
+  { 
+    value: "study js for 1 hour", 
+    complete: false
+  },
+  { 
+    value: "practice yog for 30 minutes", 
     complete: false
   },
 ];
@@ -31,5 +36,13 @@ function createElementForTask(item) {
 }
 
 function addNewItem() {
-  console.log("you clicked the button");
+  const task = {
+    value: taskInput.value,
+    complete: false
+  };
+  
+  items.push(task);
+  
+  let newItem = createElementForTask(task);
+  tasks.appendChild(newItem);
 }
