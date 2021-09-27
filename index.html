@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ToDo App</title>
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
-</head>
-  
-<body>
-  <header>
-    <h1>Get S**t Done!</h1>
-  </header>
-  
-  <main>  
-    <div class="new">
-      <input type="text" placeholder="Add new item" id="new" class="new-input">
-      <button id="add" class="new-button">Add</button>
-    </div>
-    
-  <ul id="tasks">
-    <li>TASK!</li>
-    </ul>
-  </main>
-  
-  <template id="taskTemplate">
-    <li>
-      <label class="item">
-        <input class="item-check" type="checkbox">
-        <span class="item-text"></span>
-        <button class="delete">delete</button>
-      </label>
-    </li>
-  
-  </template>
-  
-  
-  
-</body>
+  </head>
+
+  <body>
+    <header>
+      <h1>Get S**t Done!</h1>
+    </header>
+
+    <main>
+      <div class="new">
+        <input
+          type="text"
+          placeholder="Add new item"
+          id="new"
+          class="new-input"
+        />
+        <button id="add" class="new-button">Add</button>
+      </div>
+
+      <ul id="tasks">
+        <li>TASK!</li>
+      </ul>
+    </main>
+
+    <template id="taskTemplate">
+      <li>
+        <label class="item">
+          <input class="item-check" type="checkbox" />
+          <span class="item-text"></span>
+          <button class="delete">delete</button>
+        </label>
+      </li>
+    </template>
+  </body>
 </html>

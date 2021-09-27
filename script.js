@@ -10,26 +10,16 @@ const items = [
   { value: "feed pickle", 
     complete: false
   },
-  { value: "feed pickle", 
-    complete: false
-  },
-  { value: "feed pickle", 
-    complete: false
-  },
-  { value: "feed pickle", 
-    complete: false
-  },
-  
 ];
 
-for(let item of items) {
-  createElementForTask(item);
+for (let item of items) {
+  const li = createElementForTask(item);
+  tasks.appendChild(li);
 }
 
 function createElementForTask(item) {
-  const template = document.getElementIdBy("taskTemplate");
+  const template = document.getElementById("taskTemplate");
   const newListItem = template.content.cloneNode(true);
-  
   
   const checkbox = newListItem.querySelector(".item-check");
   const text = newListItem.querySelector(".item-text");
