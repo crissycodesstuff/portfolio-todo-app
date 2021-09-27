@@ -41,6 +41,10 @@ function createElementForTask(item) {
     
   }
   
+  checkbox.onchange = function (event) {
+    item.complete = event.target.checked;
+  }  
+  
   return newListItem;
 }
 
