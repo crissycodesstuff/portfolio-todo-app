@@ -51,3 +51,31 @@ h1 {
   background-color: red;
   cursor: default;
 }
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  padding: 20px 10px;
+  background-color: white;   
+}
+
+.item-check {
+  margin-right: 1rem;
+}
+
+.item-text {
+  color: green;
+}
+
+.delete {
+  visibility: hidden;
+  width: 20px;
+  margin-left: 20px
+  padding: 0;
+  border: 0;
+  background: url() no-repeat 
+}

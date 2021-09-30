@@ -2,8 +2,6 @@ const taskInput = document.getElementById("new");
 const addButton = document.getElementById("add");
 const tasks = document.getElementById("tasks");
 
-console.log(taskInput, addButton, tasks);
-
 addButton.addEventListener("click", addNewItem);
 taskInput.addEventListener("keyup", processKeyPress)
 
@@ -15,8 +13,7 @@ for (let item of items) {
 }
 
 function processKeyPress(event) {
-  console.log(event.target.value.trim);
-    addButton.disabled = event.target.value.trim() === "";
+  addButton.disabled = event.target.value.trim() === "";
   
   if (event.key === "Enter" && !addButton.disabled) {
     addNewItem();
@@ -31,19 +28,17 @@ function createElementForTask(item) {
   const text = newListItem.querySelector(".item-text");
   const deleteButton = newListItem.querySelector(".delete");
   
-  
   text.innerText = item.value;
   checkbox.checked = item.complete;
   
   deleteButton.onclick = function (event) {
     event.target.closest('li').remove();
     items.splice(items.indexOf(item), 1);
-    
   }
   
   checkbox.onchange = function (event) {
     item.complete = event.target.checked;
-  }  
+  }
   
   return newListItem;
 }
