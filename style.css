@@ -38,7 +38,7 @@ h1 {
   padding: 0 1rem;
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
+  color: red;
   background-color: black;
   cursor: pointer;
 }
@@ -48,7 +48,7 @@ h1 {
 }
 
 .new-button:disabled {
-  background-color: red;
+  background-color: black;
   cursor: default;
 }
 
