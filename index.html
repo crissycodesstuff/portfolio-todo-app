@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ToDo App</title>
     <link rel="stylesheet" href="/style.css" />
     <script src="/script.js" defer></script>
-  </head>
+</head>
+<body>
+  <header>
+    <h1>Get Sh*t Done List!</h1>
+  </header>
+  <main>
+    <div class="new">
+      <input type="text" placeholder="Add new item" id="new" class="new-input">
+      <button id="add" class="new-button" disabled>Add</button>
+    </div>
+   
+    <ul id="tasks">
+    </ul>
+  </main>
+  
+  <template id="taskTemplate">
+    <li>
+      <label class="item">
+        <input class="item-check" type="checkbox">
+        <span class="item-text"></span>
+        <button class="delete">delete</button>
+      </label>
+    </li>
+  </template>
 
-  <body>
-    <header>
-      <h1>Get S**t Done !</h1>
-    </header>
-
-    <main>
-      <div class="new">
-        <input
-          type="text"
-          placeholder="Add new item"
-          id="new"
-          class="new-input"
-        />
-        <button id="add" class="new-button" disabled>Add</button>
-      </div>
-
-      <ul id="tasks">
-      </ul>
-    </main>
-
-    <template id="taskTemplate">
-      <li>
-        <label class="item">
-          <input class="item-check" type="checkbox" />
-          <span class="item-text"></span>
-          <button class="delete">delete</button>
-        </label>
-      </li>
-    </template>
-  </body>
+</body>
 </html>
