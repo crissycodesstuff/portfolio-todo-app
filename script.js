@@ -7,7 +7,7 @@
   addButton.addEventListener("click", addNewItem);
   taskInput.addEventListener("keyup", processKeyPress);
 
-  const items = getItems();
+  const items = await getItems();
 
   for (let item of items) {
     const li = createElementForTask(item);
@@ -63,14 +63,20 @@
     taskInput.focus();
   }
 
-  function getItems() {
-    const noItemsFound = "[]";
-    const itemsJSON = localStorage.getItem("items") || noItemsFound;
-    return JSON.parse(itemsJSON);
+    async function getItems() {
+    const request = await fetch('https://todo-api-ff.azurewebsites.net/api/todo', {
+      method: "GET",
+      headers: {
+        "Content-Type": "applications/JSON"
+      }    
+    });
+      const itemsJSON = (await request.text() || "[]");
+      return JSON.parse(itemsJSON);
   }
 
-  function saveItems() {
+    async function saveItems() {
     const data = JSON.stringify(items);
     localStorage.setItem("items", data);
   }
-})();
+  
+}());
