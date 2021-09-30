@@ -57,3 +57,4 @@ function addNewItem() {
   taskInput.value = "";
   taskInput.focus();
 }
+
